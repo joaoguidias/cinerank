@@ -175,8 +175,7 @@ function renderizarRanking(filmes) {
 // ===== REMOVER FILME DO RANKING =====
 async function removerFilme(id, titulo) {
     // Confirmação antes de remover
-    if(!confirm(`Remover "${titulo}" do ranking?`)) return;
-
+    
     try {
         // Envia o id do filme pro remover.php
         const response = await fetch('api/remover.php', {

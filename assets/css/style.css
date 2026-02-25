@@ -60,7 +60,7 @@ body {
 }
 
 .search-input:focus {
-    border-color: #e50000 !important;
+    border-color: #E74C3C !important;
     box-shadow: 0 0 0 3px rgba(229, 0, 0, 0.15) !important;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .btn-buscar:hover {
-    background-color: #cc0000;
+    background-color: #E74C3C;
     color: white;
 }
 
