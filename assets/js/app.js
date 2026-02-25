@@ -32,7 +32,7 @@ async function buscarFilmes() {
 
     try {
         // Chama o buscar.php passando o nome do filme
-        const response = await fetch(`/cinerank/api/buscar.php?query=${encodeURIComponent(query)}`);
+        const response = await fetch(`api/buscar.php?query=${encodeURIComponent(query)}`);
         const filmes = await response.json();
 
         // Renderiza os resultados na tela

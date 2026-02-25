@@ -1,4 +1,5 @@
 <?php
+include 'db.php'; // Isso puxa a conexão automaticamente
 require_once '../config.php';
 /*
     Puxa o arquivo config.php que você criou. O ../ significa "volta uma pasta" — como o buscar.php está dentro de /api/, precisa voltar pra encontrar o config.php na raiz.

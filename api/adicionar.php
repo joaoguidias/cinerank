@@ -1,5 +1,6 @@
 <?php
 // Importa as configurações do banco e da API
+include 'db.php'; // Isso puxa a conexão automaticamente
 require_once '../config.php';
 
 // try/catch: tenta executar o código, se der erro cai no catch

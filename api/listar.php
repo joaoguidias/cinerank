@@ -1,4 +1,5 @@
 <?php
+include 'db.php'; // Isso puxa a conexão automaticamente
 require_once '../config.php';
 
 try {
