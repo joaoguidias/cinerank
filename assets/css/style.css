@@ -1,0 +1,284 @@
+/* ===== RESET E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #1A1C22;
+    color: #F5F5F7;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #111111;
+    border-bottom: 2px solid #FFD05E;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: #FFD05E !important;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue';
+}
+
+/* ===== SEÇÃO DE BUSCA ===== */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #F5F5F7;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.search-container {
+    background-color: #111111;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 1px solid #222222;
+}
+
+.search-input {
+    background-color: #1a1a1a !important;
+    border: 2px solid #333333 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 12px 20px !important;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #e50000 !important;
+    box-shadow: 0 0 0 3px rgba(229, 0, 0, 0.15) !important;
+}
+
+.search-input::placeholder {
+    color: #666666 !important;
+}
+
+.btn-buscar {
+    background-color: #E74C3C;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-buscar:hover {
+    background-color: #cc0000;
+    color: white;
+}
+
+/* ===== RESULTADOS DA BUSCA ===== */
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.filme-card {
+    background-color: #252833;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid #222222;
+}
+
+.filme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(229, 0, 0, 0.3);
+    border-color: #E74C3C;
+}
+
+.filme-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.filme-card-sem-poster {
+    width: 100%;
+    height: 220px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.filme-card-info {
+    padding: 12px;
+}
+
+.filme-card-titulo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #F5F5F7;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.filme-card-ano {
+    font-size: 0.75rem;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.btn-adicionar {
+    background-color: #f7422e;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #d14536;
+    color: white;
+}
+
+.btn-adicionar:disabled {
+    background-color: #444444;
+    cursor: not-allowed;
+}
+
+/* ===== RANKING ===== */
+.ranking-container {
+    background-color: #111111;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #222222;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #222222;
+    transition: border-color 0.3s;
+}
+
+.ranking-item:hover {
+    border-color: #E74C3C;
+}
+
+.ranking-posicao {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #E74C3C;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Destaque para top 3 */
+.ranking-item:nth-child(1) .ranking-posicao { color: #FFD700; font-size: 1.8rem; }
+.ranking-item:nth-child(2) .ranking-posicao { color: #C0C0C0; font-size: 1.6rem; }
+.ranking-item:nth-child(3) .ranking-posicao { color: #CD7F32; font-size: 1.4rem; }
+
+.ranking-poster {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.ranking-poster-vazio {
+    width: 60px;
+    height: 90px;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.7rem;
+}
+
+.ranking-info {
+    flex: 1;
+}
+
+.ranking-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #F5F5F7;
+    margin-bottom: 4px;
+}
+
+.ranking-ano {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+.btn-remover {
+    background-color: transparent;
+    border: 1px solid #444444;
+    color: #888888;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.btn-remover:hover {
+    background-color: #E74C3C;
+    border-color: #E74C3C;
+    color: #F5F5F7;
+}
+
+/* ===== RANKING VAZIO ===== */
+.ranking-vazio {
+    text-align: center;
+    padding: 60px 20px;
+    color: #444444;
+}
+
+.ranking-vazio i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* ===== LOADING ===== */
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #666666;
+}
+
+/* ===== TOAST (notificação) ===== */
+.toast-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
